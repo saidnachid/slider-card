@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Host Grotesk", sans-serif;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: beige;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  max-width: 600px;
+  transition: 0.3s;
+}
+
+.card {
+  display: flex;
+  gap: 10px;
+  min-width: fit-content;
+  padding: 10px;
+  background-color: white;
+}
+
+.picture,
+.details {
+  width: 100%;
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
+.details h2{
+  margin-bottom: 10px;
+}
+
+.details p {
+  color: dimgray;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.details button{
+  margin-top: 20px;
+ padding: 8px 14px;
+  background-color: dodgerblue;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.details button:hover{
+  opacity: .5;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button img{
+  width: 10px;
+}
+
+.buttons button.hide {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
